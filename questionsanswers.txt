@@ -1,0 +1,34 @@
+Question 1
+Assuming the login username to all servers is ubuntu and we have public key authentication
+(your public key is already on all of those hosts), how would you log in to a server?
+
+
+Answer:
+
+If the public key already stored inside destination server and the username is same for all than I have written a script which is responsible to just take input name/ip of the server and you can get access to relevant bastion host. 
+./script.sh servername
+
+OR
+
+./script.sh ip # here ip is the private IP w.r.t the file shared as inventory list and it will automatically call bastion as a host and ssh to it
+
+For example:
+shakeeb@shakeeb-xps-13:~/shakeeb_working$ bash script.sh 192.168.0.1
+
+#than it will take an SSH access to this bastion host: 212.186.105.45
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+Question 2
+There can be thousands of servers in the inventory. You might need to log in remotely multiple
+times per hour to arbitrary servers from the list. How would you ease this process?
+
+Answer:
+
+If we need to access thousands of server multiple times than there are many options.
+1) Bash script which i have written is responsible to access the bastion host only.
+2) If we want to run same command inside all the servers ( or some defined list of host ) than use ANSIBLE. 
+We need to write up a playbook who is responsible to automatically SSH and than perform our custom actions accordingly.
+
+Both of the questions are reflecting using some automation technique and i suppose if we can either use this script for SSH or after some modification we can run some commands as well inside the server
+OR
+Use Ansible playbooks.

@@ -14,7 +14,7 @@ Place the script in the directory where that inventory list is present or edit t
 ### Step # 2: 
 Run below command to access any of the server either by NAME or IP ( It will directly pick BastionHost ) and SSH to the server.
 
-#### If you want to use ip
+### If you want to use ip
 
 ```bash
 bash script.sh IP
@@ -28,7 +28,7 @@ bash script.sh IP
 bash script.sh 192.168.0.1
 ```
 
-#### If you want to use server name instead of ip.
+### If you want to use server name instead of ip.
 ```bash
 bash script.sh server
 ```
@@ -37,3 +37,4 @@ bash script.sh server
 ```bash 
 bash script.sh server1
 ```
+
